@@ -1,0 +1,151 @@
+
+
+
+                                      Bad Parts::--
+   
+1) Global Variables:
+	1. Global scope //var
+	2. Function (local) scope //let 
+	3. Block scope (new with ES6) //const 
+
+	 
+==> Global Variables are the variables that can be accessed from anywhere in the program.
+
+==> var keyword is used to declare variables globaly.
+    
+==>  Variables declared using the var keyword are either globally or functionally scoped, they do not support block-level scope. 
+	
+ex:-	var color='red';
+	console.log('color'); //red
+	
+	function getColor(){
+	console.log('color');
+	}
+	getColor();	//red
+
+	if(true){
+	var getting='Hello';
+	console.log('getting'); //Hello
+	}
+	console.log('getting'); //Hello
+
+==> The main difference is that let deals with a block scope and redeclare it can not be assign 
+
+==> If once assign any value,we can't reassign values in Const variable 
+
+2) +Adds and concatenates::--
+
+There are 3 ways to concatenate strings in JavaScript.
+
+	i)	const str = 'Hello' + ' ' + 'World';
+	  	str; // 'Hello World'	
+	
+       also use +=, where a += b is a shorthand for a = a + b.
+	
+	ii)	let str = 'Hello';
+		str += ' ';
+		str += 'World';
+		str; // 'Hello World'
+	
+	
+	iii) 	let str = 'Values: ';
+		str += 42;
+		str += ' ';
+
+		str += {};
+		str += ' ';
+
+		str += null;
+
+		str; // 'Values: 42 [object Object] null'
+
+3) Semicolon Insertion::--
+	var a
+	a
+	=
+	3 console.log(a) //a = 3;
+
+4) typeof::--
+
+	checks the condition of what we are expecting 
+
+		console.log(typeof 42);
+		// output: "number"
+
+	JavaScript keyword that will return the type of a variable when you call it.
+
+5) Phony arrays::--
+	Arrays are just objects in JavaScript, so the typeof operator won’t work for checking arrays.
+
+	typeof [1, 2] returns 'object'.
+
+	// we can use the Array.isArray method to check if something is an array.
+
+6) == and !=
+		5==5 condition (True)
+		5==2 condition (false)
+		5!=2 condition (True)
+
+      ===   -> Equal value and same type also
+		(5 === 5) condition (True)
+		(5===2)
+ 
+7)undefind, Null, NaN, false
+	
+	undefined-->
+			var x;
+			console.log(x);		//undefined
+			console.log(typeof x)	//undefined
+
+
+	Null-->	
+			var x = null;
+			console.log(x);				//null
+			console.log(typeof x)			//object
+			console.log(null==undefined);		//true
+			console.log(null===undefined); 		//false   equal value and type checks
+
+
+	NaN-->
+			var x=NaN;
+			console.log(x);   	//NaN
+			console.log(typeof x)	// number
+				
+				OR
+			var z=4;
+			console.log(typeof z); 	//Number
+			console.log(z*'text');	//NaN
+			
+	false-->
+			let condition = false;	// if turn ,true then appear on log
+			if(){
+				console.log("This condition is true");
+			}
+				OR
+
+			if(10>5){
+				console.log("This condition is true");
+			}
+
+
+var z=3;
+console.log(z*'text');
+console.log(typeof z)
+
+Memory Management System In javascript::- 
+
+
+	JavaScript engines have two places where they can store data: The memory heap and stack. Heaps and stacks are two data structures that the engine uses for different purposes.
+
+
+These primitives are used by the developer to explicitly allocate and free memory from and to the operating system. At the same time, JavaScript allocates memory when things (objects, strings, etc.) are created and “automatically” frees it up when they are not used anymore, a process called garbage collection.
+
+
+
+
+
+
+
+
+
+

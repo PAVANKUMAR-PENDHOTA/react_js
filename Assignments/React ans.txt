@@ -1,0 +1,27 @@
+
+	why using export in react js ???
+
+	In JavaScript ES6, you can import and export functionalities from modules. These can be functions, classes, components, constants, essentially anything you can assign to a JavaScript variable. ... The import and export statements in JavaScript help you to share code across multiple files
+
+	Advantages of using arrow functions in react js ?
+
+ use arrow functions when possible and in most cases is the proper approach. … I also like that you are passing in the parameter of sectionID taking full advantage of how react does things instead of using the data attribute then having to us JS to pull the id out of the React element …
+
+
+Is it OK to use arrow functions in render methods? Generally speaking, yes, it is OK, and it is often the easiest way to pass parameters to callback functions. If you do have performance issues, by all means, optimize!
+
+Arrows prevent this bugs. Arrow functions don't redefine the value of this within their function body. This makes it a lot easier to predict their behavior when passed as callbacks, and prevents bugs caused by use of this within callbacks.
+
+	Inheritance in react js ?
+
+Inheritance allows the app to do the coupling between the parent-child component and reuse properties such as state values and function in its child components. React does not use inheritance except in the initial component class, which extends from the react package
+
+Should I use inheritance in React?
+React has a powerful composition model, and we recommend using composition instead of inheritance to reuse code between components.
+
+Why is there no inheritance in React?
+1 Answer. Just extends your component to make a child component. Inheritance is in most scenarios — just not good a viable solution. Because extending components with inheritance more or less lead to a scenario at some point, where the behaviors cannot be clubbed seamlessly.
+
+
+Are Props inherited?
+Props are inherited from another component. In my above Example component that is called inside the ExampleContainer component, I passed in three props : firstProperty, secondProperty, and classMethod.

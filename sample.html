@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+const test = (array) => {
+  array.push((new Array(10000000)).fill('test'));
+};
+
+const testArray = [];
+
+for(let i = 0; i <= 1000; i++) {
+  test(testArray);
+}
+</script>
+
+</body>
+</html>
+
+

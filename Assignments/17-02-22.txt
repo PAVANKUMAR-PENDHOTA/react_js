@@ -1,0 +1,20 @@
+
+
+
+================Memory Management ================
+
+
+==> JavaScript engine does everything for you.
+    
+    we create functions, variables, and so on, the engine allocates memory for them and frees it as soon as the memory is no longer needed.
+
+	In JavaScript, when we create functions, variables, and so on, the engine allocates memory for them and frees it as soon as the memory is no longer needed.
+
+Stack and Heap::--
+
+  	In JavaScript, there are two options for storing data: on the stack and on the heap. Both are names of data structures that are used by the engine for various purposes.
+
+	High-level languages have a built-in subsystem called the garbage collector. The role of this subsystem is to track memory allocation operations and use it to find out when a piece of allocated memory is no longer needed. If this is the case, the garbage collector can automatically release this fragment.
+
+
+	Most garbage collectors work by collecting memory that cannot be accessed, that is, one that all variables pointing to are unavailable. This, however, is too bold an assumption about the possibility of freeing memory, since at any time a certain memory area may have variables pointing to it in a certain scope, although this memory area will never be worked on in the program.

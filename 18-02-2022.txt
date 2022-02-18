@@ -1,0 +1,31 @@
+
+	* What Are Memory Leaks and what Causes it in Js and write an example to prove a memory leak?
+
+=> Memory leaks can be defined as memory that is not required by an application anymore 
+
+=> that for some reason is not returned to the operating system or the pool of free memory. 
+
+=> Programming languages favor different ways of managing memory. 
+   
+ In generally, JavaScript memory leaks are caused by unwanted references (to objects that will never be used again). They are usually bugs in the JS code.
+
+  Causes:-
+
+  "The main cause for leaks in Garbage collected languages are unwanted references i.e., Mark-and-Sweep"
+
+--> Accidental global variables
+--> Forgotten timers/callbacks
+--> Out of DOM references
+--> Closures
+
+example:-
+
+const test = (array) => {
+  array.push((new Array(1000000)).fill('test'));
+};
+
+const testArray = [];
+
+for(let i = 0; i <= 1000; i++) {
+  test(testArray);
+}
